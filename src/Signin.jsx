@@ -1,3 +1,4 @@
+import { form } from "framer-motion/client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -48,7 +49,8 @@ export default function Signin(){
   }
 
   return(
-    <div className="w-full relative bg-black/30 bg-blend-multiply bg-[url('./bak.jpeg')] bg-cover bg-center flex justify-center items-center h-screen">
+    
+      <div className="w-full relative bg-black/30 bg-blend-multiply bg-[url('17pro.png')] bg-cover bg-center flex justify-center items-center h-screen">
 
       {/* 🔙 Back Button */}
       <button
@@ -58,7 +60,7 @@ export default function Signin(){
         ←
       </button>
 
-      <div className="w-[25rem] bg-white/5 rounded-3xl backdrop-blur-lg border border-white/30 p-10 py-20">
+      <div className="w-[25rem] bg-white/5 rounded-3xl backdrop-brightness-50 border border-white/30 p-10 py-20">
 
         <div className="flex flex-col justify-center items-center gap-6">
 
@@ -106,5 +108,6 @@ export default function Signin(){
       </div>
 
     </div>
+      
   )
 }
