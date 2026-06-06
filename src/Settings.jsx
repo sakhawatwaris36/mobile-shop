@@ -45,7 +45,7 @@ export default function Settings() {
       <ModrenSidebar />
 
       {/* 🔴 SAME OLD DESIGN (ONLY FIXED COLORS SUPPORT) */}
-      <div className="ml-64 p-6 min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
+      <div className="ml-64 setting p-6 min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
 
         {/* Header */}
         <h1 className="text-3xl font-bold mb-6">⚙️ Settings</h1>

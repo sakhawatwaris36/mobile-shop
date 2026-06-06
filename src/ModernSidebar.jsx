@@ -4,99 +4,119 @@ import {
   MessageCircle,
   Users,
   Settings,
-  Smartphone
+  Smartphone,
 } from "lucide-react";
 
 import { NavLink } from "react-router-dom";
 
 export default function ModrenSidebar() {
+
   const linkStyle = ({ isActive }) =>
-    `flex items-center gap-3 px-3 py-2 rounded-lg transition duration-300 ${
+    `flex items-center gap-3 px-3 py-2 rounded-lg transition duration-300 w-full ${
       isActive
-        ? "bg-[#1e293b] text-blue-400 shadow-inner"
-        : "hover:text-blue-400 hover:translate-x-1"
+        ? "bg-[#1e293b] text-blue-400"
+        : "hover:bg-[#1e293b] hover:text-blue-400"
     }`;
 
   return (
-    <div className="h-screen w-64 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white flex flex-col p-5 fixed shadow-2xl">
+    <div
+      className="
+        fixed top-0 left-0 h-screen
+        w-[4rem] md:w-64
+        bg-gradient-to-b from-[#0f172a] to-[#1e293b]
+        text-white flex flex-col p-2 md:p-5
+        transition-all duration-300
+        overflow-hidden
+      "
+    >
 
-      {/* 🔥 Logo Section */}
-      <div className="flex items-center gap-3 mb-10">
+      {/* Logo */}
+      <div className="flex items-center justify-center md:justify-start gap-3 mb-8">
+        <Smartphone size={24} />
 
-        <div className="bg-gradient-to-tr from-blue-500 to-purple-500 p-3 rounded-2xl shadow-xl animate-pulse">
-          <Smartphone size={26} className="text-white" />
-        </div>
-
-        <div>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Malik Mobile
-          </h1>
+        <div className="hidden md:block">
+          <h1 className="text-xl font-bold">Malik Mobile</h1>
           <span className="text-xs text-gray-400">Premium Store</span>
         </div>
-
       </div>
 
-      {/* 🔥 Badge */}
-      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-sm px-3 py-1 rounded-full w-fit mb-6 shadow-md animate-pulse">
+      {/* Badge */}
+      <div className="hidden md:block bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 rounded-full w-fit mb-6">
         🔥 Hot Deals
       </div>
 
-      {/* 📌 Menu */}
-      <nav className="flex flex-col gap-4 text-sm">
+      {/* MENU */}
+      <nav className="flex flex-col gap-4 text-sm items-center md:items-start">
 
         <NavLink to="/Dashboard" className={linkStyle}>
-          <Home size={20} /> Dashboard
+          <Home size={20} />
+          <span className="hidden md:inline">Dashboard</span>
         </NavLink>
 
         <NavLink to="/Orders" className={linkStyle}>
-          <ShoppingCart size={20} /> Orders
+          <ShoppingCart size={20} />
+          <span className="hidden md:inline">Orders</span>
         </NavLink>
 
         <NavLink to="/Customers" className={linkStyle}>
-          <Users size={20} /> Customers
+          <Users size={20} />
+          <span className="hidden md:inline">Customers</span>
         </NavLink>
 
         <NavLink to="/Messages" className={linkStyle}>
-          <MessageCircle size={20} /> Messages
+          <MessageCircle size={20} />
+          <span className="hidden md:inline">Messages</span>
         </NavLink>
 
-        {/* 📦 Product Card */}
-        <div className="bg-[#1e293b] p-3 rounded-xl shadow-inner mt-2 hover:scale-105 transition duration-300">
-          <div className="flex items-center gap-2 mb-2">
-            <ShoppingCart size={18} className="text-blue-400" />
-            <h2 className="font-semibold">Products</h2>
+        {/* ⭐ PRODUCTS STICKER */}
+        <NavLink to="/Products" className="w-full">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-3 shadow-lg hover:scale-105 transition-all duration-300">
+
+            {/* glow circle */}
+            <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/20 rounded-full"></div>
+
+            <div className="relative z-10 flex items-center justify-center md:justify-start gap-3">
+
+              <div className="bg-white/20 p-2 rounded-xl">
+                <ShoppingCart size={20} />
+              </div>
+
+              <div className="hidden md:block">
+                <h2 className="font-bold text-sm">
+                  Products
+                </h2>
+
+                <p className="text-[11px] text-white/80">
+                  View All Items
+                </p>
+              </div>
+
+            </div>
+
           </div>
-
-          <p className="text-xs text-gray-400">
-            📱 iPhones, Samsung, Accessories available
-          </p>
-
-          <NavLink to="/Products">
-            <button className="mt-2 w-full bg-blue-500 text-sm py-1 rounded-lg hover:bg-blue-600 transition">
-              View Items
-            </button>
-          </NavLink>
-        </div>
+        </NavLink>
 
         <NavLink to="/Settings" className={linkStyle}>
-          <Settings size={20} /> Settings
+          <Settings size={20} />
+          <span className="hidden md:inline">Settings</span>
         </NavLink>
 
       </nav>
 
-      {/* 👤 Profile */}
-      <div className="mt-auto flex items-center gap-3 bg-[#1e293b] p-3 rounded-xl">
+      {/* PROFILE */}
+      <div className="mt-auto flex items-center justify-center md:justify-start bg-[#1e293b] p-2 md:p-3 rounded-xl">
+
         <img
           src="https://i.pravatar.cc/40"
-          alt="profile"
-          className="rounded-full"
+          className="rounded-full w-8 h-8"
         />
-        <div>
+
+        <div className="hidden md:block ml-3">
           <p className="text-sm font-semibold">Sakhawat</p>
           <span className="text-xs text-gray-400">Admin</span>
         </div>
-      </div>
 
+      </div>
     </div>
   );
 }

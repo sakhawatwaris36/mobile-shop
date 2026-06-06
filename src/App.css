@@ -1,0 +1,20 @@
+@media (max-width: 640px) {
+  .dashboard{
+    margin-left:60px;
+  }
+  .customer{
+    margin-left:60px;
+  }
+  .message{
+    margin-left:60px;
+  }
+  .product{
+    margin-left:60px;
+  }
+  .setting{
+    margin-left:60px;
+  }
+  .order{
+    margin-left:60px;
+  }
+}

@@ -59,7 +59,7 @@ export default function Customers() {
       <ModrenSidebar />
 
       {/* MAIN */}
-      <div className="ml-64 p-8 min-h-screen bg-gradient-to-br from-[#050816] via-[#0f172a] to-[#020617] text-white">
+      <div className="ml-64 customer p-8 min-h-screen bg-gradient-to-br from-[#050816] via-[#0f172a] to-[#020617] text-white">
 
         {/* HEADER */}
         <div className="flex justify-between items-center mb-8">

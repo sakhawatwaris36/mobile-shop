@@ -1,6 +1,6 @@
 export default function Dashboardcontent() {
   return (
-    <div className="ml-64 p-6 bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] min-h-screen text-white">
+    <div className="ml-64 dashboard p-6 bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] min-h-screen text-white">
 
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
