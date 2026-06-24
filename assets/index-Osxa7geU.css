@@ -1,0 +1,1 @@
+.sidebar{width:16rem;padding:20px}.dashboard,.customer,.product,.order,.setting,.message{margin-left:16rem;transition:margin-left .3s}@media (width<=640px){.sidebar{width:4rem;padding:8px}.dashboard,.customer,.product,.order,.setting,.message{margin-left:4rem}}
